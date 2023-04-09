@@ -1,6 +1,12 @@
-Thanks for downloading this template!
+Este é um projeto para divulgar o escritório de engenharia Bueno.
 
-Template Name: Sailor
-Template URL: https://bootstrapmade.com/sailor-free-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Foi desenvolvido usando uma template Bootstrap com HTML, css e Javascript.
+
+Fotos do projeto:
+
+
+inicial.png
+
+about.png
+
+service.png
