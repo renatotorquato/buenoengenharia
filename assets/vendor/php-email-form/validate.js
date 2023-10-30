@@ -79,6 +79,7 @@
   }
 
   function displayError(thisForm, error) {
+    location.reload()
     thisForm.querySelector('.loading').classList.remove('d-block');
     //O formulário de envio de email foi mudado para outro que não usa PHP, então somente está usando este recurso para sinalizar email enviado para o usuário.
     thisForm.querySelector('.error-message').innerHTML = `Email enviado com sucesso!`;
