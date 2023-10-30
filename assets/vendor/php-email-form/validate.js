@@ -3,6 +3,8 @@
 * URL: https://bootstrapmade.com/php-email-form/
 * Author: BootstrapMade.com
 */
+
+// Esta função está quase toda inativa, pois o formulário de envio de email foi trocado, olhar na linha 83 deste código
 (function () {
   "use strict";
 
@@ -22,16 +24,16 @@
         return;
       }
       thisForm.querySelector('.loading').classList.add('d-block');
-      thisForm.querySelector('.error-message').classList.remove('d-block');
       thisForm.querySelector('.sent-message').classList.remove('d-block');
+      thisForm.querySelector('.error-message').classList.remove('d-block');
 
       let formData = new FormData( thisForm );
 
       if ( recaptcha ) {
-        if(typeof grecaptcha !== "undefined" ) {
-          grecaptcha.ready(function() {
+        if(typeof recaptcha !== "undefined" ) {
+          recaptcha.ready(function() {
             try {
-              grecaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
+              recaptcha.execute(recaptcha, {action: 'php_email_form_submit'})
               .then(token => {
                 formData.set('recaptcha-response', token);
                 php_email_form_submit(thisForm, action, formData);
@@ -59,7 +61,7 @@
       if( response.ok ) {
         return response.text();
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
+        throw new Error(`Ola ${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
@@ -78,7 +80,8 @@
 
   function displayError(thisForm, error) {
     thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
+    //O formulário de envio de email foi mudado para outro que não usa PHP, então somente está usando este recurso para sinalizar email enviado para o usuário.
+    thisForm.querySelector('.error-message').innerHTML = `Email enviado com sucesso!`;
     thisForm.querySelector('.error-message').classList.add('d-block');
   }
 
