@@ -629,6 +629,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content h2 {
+  color: #101D40;
   font-weight: 700;
   font-size: 48px;
   line-height: 60px;
@@ -733,6 +734,16 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio h2 {
+  text-align: center;
+  color: #101D40;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .portfolio #portfolio-flters {
